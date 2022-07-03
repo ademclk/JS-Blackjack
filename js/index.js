@@ -1,5 +1,6 @@
 let firstCard = 10
 let secondCard = 7
+let cards = [firstCard, secondCard] // Creating an array.
 let hasBlackJack = false
 let isAlive = true
 let message = ""
@@ -16,7 +17,10 @@ function start() {
 }
 
 function render() {
-     cardsEl.textContent = "Cards : " + firstCard + " " + secondCard
+     // It renders first and second card.
+     cardsEl.textContent = "Cards : " + cards[0] + " " + cards[1]
+     // It renders all the cards.
+     
      sumEl.textContent = "Sum : " + sum
      if (sum < 21) {
           message = "Wanna draw another card?"
