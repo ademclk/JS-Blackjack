@@ -12,7 +12,7 @@ let cardsEl = document.getElementById("cards-el")
 let sum = firstCard + secondCard
 
 function getRandomCard() {
-     return 5
+     return Math.floor(Math.random() * 13) + 1
 }
 
 function start() {
