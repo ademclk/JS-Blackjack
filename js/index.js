@@ -1,5 +1,5 @@
-let firstCard = 10
-let secondCard = 7
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard] // Creating an array.
 let hasBlackJack = false
 let isAlive = true
@@ -10,6 +10,10 @@ let sumEl = document.querySelector("#sum-el")
 // More powerful than getElementById. Does the same thing.
 let cardsEl = document.getElementById("cards-el")
 let sum = firstCard + secondCard
+
+function getRandomCard() {
+     return 5
+}
 
 function start() {
      console.log("Starting game")
@@ -40,7 +44,7 @@ function render() {
 
 function newCard(){
      console.log("Drawing new card")
-     let newCard = 2
+     let newCard = getRandomCard()
      cards.push(newCard)
      sum += newCard
      render()
