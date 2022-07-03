@@ -3,6 +3,7 @@ let secondCard = 7
 let hasBlackJack = false
 let isAlive = true
 let message = ""
+let messageEl = document.getElementById("message-el")
 let sum = firstCard + secondCard
 
 function start() {
@@ -17,5 +18,5 @@ function start() {
           message = "Bust!"
           isAlive = false
      }
-     console.log(message)
+     messageEl.textContent = message
 }
