@@ -18,9 +18,11 @@ function start() {
 
 function render() {
      // It renders first and second card.
-     cardsEl.textContent = "Cards : " + cards[0] + " " + cards[1]
+     cardsEl.textContent = "Cards : "
      // It renders all the cards.
-     
+     for (let i = 0; i < cards.length; i++) {
+          cardsEl.textContent += cards[i] + " "
+     }
      sumEl.textContent = "Sum : " + sum
      if (sum < 21) {
           message = "Wanna draw another card?"
@@ -39,6 +41,7 @@ function render() {
 function newCard(){
      console.log("Drawing new card")
      let newCard = 2
+     cards.push(newCard)
      sum += newCard
      render()
 }
