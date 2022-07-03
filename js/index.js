@@ -56,9 +56,11 @@ function render() {
 }
 
 function newCard(){
-     console.log("Drawing new card")
-     let newCard = getRandomCard()
-     cards.push(newCard)
-     sum += newCard
-     render()
+     if (isAlive === true && hasBlackJack === false) {
+          console.log("Drawing new card")
+          let newCard = getRandomCard()
+          cards.push(newCard)
+          sum += newCard
+          render()
+     }
 }
