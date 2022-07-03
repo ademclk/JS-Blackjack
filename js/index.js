@@ -26,3 +26,7 @@ function start() {
      }
      messageEl.textContent = message
 }
+
+function newCard(){
+     console.log("Drawing new card")
+}
